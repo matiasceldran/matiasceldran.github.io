@@ -171,8 +171,8 @@
   }
 
   .hero-photo {
-    width: 160px;
-    height: 160px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     background: var(--navy-light);
     border: 3px solid rgba(184,147,74,0.4);
@@ -190,6 +190,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top;
   }
 
   /* STATS BAR */
@@ -459,67 +460,6 @@
     font-style: normal;
   }
 
-  /* BLOG */
-  .blog-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-
-  .blog-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    overflow: hidden;
-    transition: border-color 0.2s;
-    cursor: pointer;
-  }
-
-  .blog-card:hover { border-color: var(--navy); }
-
-  .blog-card-img {
-    height: 6px;
-    background: var(--gold);
-  }
-
-  .blog-card-body { padding: 1.5rem; }
-
-  .blog-date {
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    margin-bottom: 0.6rem;
-  }
-
-  .blog-card h3 {
-    font-family: 'EB Garamond', serif;
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--navy);
-    margin-bottom: 0.5rem;
-    line-height: 1.35;
-  }
-
-  .blog-card p {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    line-height: 1.65;
-  }
-
-  .blog-read-more {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-    font-size: 0.78rem;
-    color: var(--gold);
-    text-decoration: none;
-    margin-top: 1rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
-
   /* CV */
   .cv-section {
     display: grid;
@@ -707,7 +647,7 @@
     .hero-photo { display: none; }
     .hero h1 { font-size: 2.2rem; }
     .bio-grid, .cv-section, .contact-grid { grid-template-columns: 1fr; }
-    .projects-grid, .blog-grid { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
     .stats-inner { flex-wrap: wrap; gap: 1.5rem; }
     .nav-links { display: none; }
     .cv-download-box { flex-direction: column; gap: 1.5rem; }
@@ -724,7 +664,6 @@
       <li><a href="#sobre-mi">Sobre mí</a></li>
       <li><a href="#proyectos">Proyectos</a></li>
       <li><a href="#publicaciones">Publicaciones</a></li>
-      <li><a href="#blog">Blog</a></li>
       <li><a href="#cv">CV</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
@@ -747,8 +686,8 @@
       </div>
     </div>
     <div class="hero-photo">
-      <!-- Sustituye esta foto por: <img src="tu-foto.jpg" alt="Matías Celdrán"> -->
-      MCB
+      <!-- Foto de perfil -->
+      <img src="foto_perfil.jpg" alt="Matías Celdrán Bonafonte">
     </div>
   </div>
 </header>
@@ -757,7 +696,7 @@
 <div class="stats-bar">
   <div class="stats-inner">
     <div class="stat">
-      <span class="stat-num">3</span>
+      <span class="stat-num">2</span>
       <span class="stat-label">Publicaciones</span>
     </div>
     <div class="stat">
@@ -872,24 +811,23 @@
         <p>La tesis reconceptualiza los <em>innovation labs</em> no como simples espacios de experimentación, sino como sistemas de gobernanza que coordinan, legitiman e institucionalizan la innovación. Metodología cualitativa de casos múltiples con análisis Gioia, sobre organizaciones hoteleras españolas.</p>
       </div>
       <div class="project-card">
-        <p class="project-tag">Capítulo de libro · 2026</p>
-        <h3>Participación en IFKAD 2024 — Nápoles</h3>
-        <p>Ponencia presentada en el <em>International Forum on Knowledge Asset Dynamics</em> (Nápoles, Italia), publicada posteriormente como capítulo de libro con DOI: 10.1007/978-3-032-23684-5_72.</p>
+        <p class="project-tag">Divulgación sectorial · Septiembre 2026</p>
+        <h3>ITH Hotel Data Breakfast & Coffee Tour 2026 — Valencia y Benidorm</h3>
+        <p>Presentación en las jornadas del Instituto Tecnológico Hotelero (ITH) sobre gamificación aplicada a la sostenibilidad hotelera, con el caso real del hotel MYND Adeje (Canarias): reducción del 7,1% del consumo energético mediante la plataforma <strong>Guext Suite</strong> de <strong>Nethits</strong>. Eventos en Valencia (22 sep.) e Invat·tur, Benidorm (24 sep.).</p>
       </div>
       <div class="project-card">
-        <p class="project-tag">Línea de investigación · En desarrollo</p>
-        <h3>[Añade aquí tu segunda línea o colaboración cuando la tengas]</h3>
-        <p>Este espacio está reservado para futuros proyectos, colaboraciones con la industria hotelera, o nuevas líneas que surjan durante el doctorado.</p>
+        <p class="project-tag">Congreso internacional · 2026</p>
+        <h3>ACIEK UTAMED 2026 — Málaga</h3>
+        <p>Artículo aceptado para presentación en la <em>ACIEK Academy International Conference</em> con el trabajo <em>Innovation Labs as Organizational Governance Systems: Evidence from the Hospitality Sector</em>, con posibilidad de publicación posterior en revista.</p>
       </div>
       <div class="project-card">
-        <p class="project-tag">Revisión de literatura · En curso</p>
-        <h3>Estado del arte: Innovation Labs en el sector servicios</h3>
-        <p>Revisión sistemática de la literatura sobre la implantación y resultados de los laboratorios de innovación en empresas del sector servicios, con foco especial en turismo y hotelería.</p>
+        <p class="project-tag">Revisión sistemática · En curso</p>
+        <h3>Revisión sistemática de la literatura sobre Innovation Labs en organizaciones de servicios</h3>
+        <p>Revisión sistemática con análisis bibliométrico sobre la implantación y resultados de los laboratorios de innovación en el sector servicios, con foco especial en turismo y hotelería. Ha dado lugar al artículo <em>A Taxonomy of Innovation Labs Using a Bibliometric Analysis Methodology</em> (Cuenca, 2025).</p>
       </div>
     </div>
   </section>
 
-  <!-- PUBLICACIONES -->
   <section id="publicaciones">
     <div class="section-header">
       <span class="section-num">03.</span>
@@ -910,20 +848,10 @@
     <div class="pub-item">
       <div class="pub-year">2025</div>
       <div>
-        <span class="pub-type working">Working paper · En revisión</span>
-        <div class="pub-title">Innovation Labs as Organizational Governance Systems: Evidence from the Hospitality Sector</div>
-        <div class="pub-authors">Celdrán Bonafonte, M., Morales-Alonso, G.</div>
-        <div class="pub-venue">Enviado a <strong>Technovation</strong> (en revisión). Keywords: Innovation governance · Organizational ambidexterity · Innovation labs · Service innovation · Tourism management.</div>
-      </div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-year">2025</div>
-      <div>
         <span class="pub-type conference">Congreso internacional</span>
         <div class="pub-title">A Taxonomy of Innovation Labs Using a Bibliometric Analysis Methodology</div>
-        <div class="pub-authors">Celdrán Bonafonte, M.</div>
-        <div class="pub-venue"><strong>3rd Conference in Business Research and Management</strong>, 2025.</div>
+        <div class="pub-authors">Celdrán Bonafonte, M., Morales-Alonso, G., Santarsiero, F.</div>
+        <div class="pub-venue"><strong>3rd Conference in Business Research and Management</strong>, Cuenca, 2025.</div>
       </div>
     </div>
 
@@ -935,43 +863,7 @@
     </p>
   </section>
 
-  <!-- BLOG -->
-  <section id="blog">
-    <div class="section-header">
-      <span class="section-num">04.</span>
-      <h2 class="section-title">Notas de investigación</h2>
-      <span class="section-line"></span>
-    </div>
-    <div class="blog-grid">
-      <div class="blog-card">
-        <div class="blog-card-img"></div>
-        <div class="blog-card-body">
-          <p class="blog-date">[Fecha de tu primera entrada]</p>
-          <h3>¿Qué es un Innovation Lab y por qué importa en la hotelería?</h3>
-          <p>Una introducción accesible al concepto de laboratorio de innovación y por qué el sector hotelero es un campo fértil para estudiarlo. [Publícala cuando quieras]</p>
-          <a href="#" class="blog-read-more">Leer más →</a>
-        </div>
-      </div>
-      <div class="blog-card">
-        <div class="blog-card-img"></div>
-        <div class="blog-card-body">
-          <p class="blog-date">[Fecha]</p>
-          <h3>Mi experiencia presentando en el IFKAD 2024 en Nápoles</h3>
-          <p>Reflexiones sobre mi primera participación en un congreso internacional: la preparación, el feedback recibido y lo que me llevo de la experiencia. [Publícala cuando quieras]</p>
-          <a href="#" class="blog-read-more">Leer más →</a>
-        </div>
-      </div>
-      <div class="blog-card">
-        <div class="blog-card-img"></div>
-        <div class="blog-card-body">
-          <p class="blog-date">[Fecha]</p>
-          <h3>[Tu próxima entrada — sobre lo que estés aprendiendo]</h3>
-          <p>Este espacio es tuyo. Puede ser una reflexión sobre un paper, un método de investigación, o cualquier cosa relevante para tu comunidad investigadora.</p>
-          <a href="#" class="blog-read-more">Leer más →</a>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- CV -->
   <section id="cv">
@@ -1029,17 +921,24 @@
           </div>
         </div>
         <div class="cv-entry">
+          <div class="cv-year-range">2026</div>
+          <div class="cv-entry-content">
+            <div class="cv-entry-title">Ponente en ACIEK UTAMED 2026</div>
+            <div class="cv-entry-sub">ACIEK Academy International Conference, Málaga</div>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-year-range">2025</div>
+          <div class="cv-entry-content">
+            <div class="cv-entry-title">Ponente en 3rd Conference in Business Research and Management</div>
+            <div class="cv-entry-sub">Cuenca</div>
+          </div>
+        </div>
+        <div class="cv-entry">
           <div class="cv-year-range">2024</div>
           <div class="cv-entry-content">
             <div class="cv-entry-title">Ponente en IFKAD 2024</div>
             <div class="cv-entry-sub">International Forum on Knowledge Asset Dynamics, Nápoles</div>
-          </div>
-        </div>
-        <div class="cv-entry">
-          <div class="cv-year-range">[año]</div>
-          <div class="cv-entry-content">
-            <div class="cv-entry-title">[Añade aquí más experiencia cuando la tengas]</div>
-            <div class="cv-entry-sub">[Institución]</div>
           </div>
         </div>
       </div>
